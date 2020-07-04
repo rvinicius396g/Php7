@@ -20,12 +20,13 @@
             $this->nome = $nome;
         }
         public function setEmail($email){
-            $this->nome = $email;
+            $this->email = $email;
         }
         public function setSenha($senha){
-            $this->nome = $senha;
+            $this->senha = $senha;
         }
-        public function __toString($senha){
+        public function __toString(){
+            
             return json_encode(array(
                 "nome" => $this -> getNome(),
                 "email" => $this -> getEmail(),
