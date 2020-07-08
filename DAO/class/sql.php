@@ -11,11 +11,11 @@
         private function setParams($statment, $parameters=array()){
 
             foreach($parameters as $key=>$value){
-                $this->setparam($key,$value);
+                $this->setParam($statment,$key,$value);
             }
 
         }
-        private function setparam($statment, $key, $value){
+        private function setParam($statment, $key, $value){
             
             $statment->bindParam($key, $value);
 
@@ -30,7 +30,7 @@
 
             return $stmt;
         }
-        public function select($rowQuery, $params= array()){
+        public function select($rawQuery, $params= array()){
             $stmt = $this->query($rawQuery,$params);
 
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
