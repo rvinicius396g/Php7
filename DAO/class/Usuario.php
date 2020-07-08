@@ -47,6 +47,18 @@
                 $this->setDtCadastro(new DateTime($row['dtcadastro']));
             }
         }
+        //Função Static
+        public static function getList(){
+            $sql = new Sql();
+            
+            return $sql->select("select * from tb_usuarios order by deslogin;");
+        }
+        public static function search($login){
+            $sql = new Sql();
+            return $sql->select("SELECT * FROM tb_usuarios WHERE deslogin LIKE :SEARCH",array(
+                ":SEARCH"=>"%".$login."%"
+            ));
+        }
 
         public function __tostring(){
             return json_encode(array(
@@ -56,8 +68,56 @@
                 "dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
             ));
         }
+
+        public function login($login,$password){
+            $sql = new Sql();
+            
+            $results = $sql->select("SELECT * FROM tb_usuarios WHERE deslogin = :ID AND dessenha = :PASS",array(
+                ":ID"=>$login,
+                ":PASS"=>$password
+            ));
+
+            if(count($results) > 0){
+                $row = $results[0];
+
+                $this->setIdusuario($row['idusuario']);
+                $this->setDeslogin($row['deslogin']);
+                $this->setDessenha($row['dessenha']);
+                $this->setDtCadastro(new dateTime($row['dtcadastro']));
+
+            }else{
+                throw new Exception("Login e/ou senha inválidos");
+            }
+        }
         
         
 
     }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

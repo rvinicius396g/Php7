@@ -1,13 +1,13 @@
 <?php
     class Sql extends PDO {
-        private $conn;
+        private $conn;  //atributo com encapsulamento
         
         public function __construct(){
-
+            //metodo construtor, para conexão com o banco
             $this->conn = new PDO("mysql:host=localhost;dbname=db_php7","root", "");
 
         }
-
+        //metodos
         private function setParams($statment, $parameters=array()){
 
             foreach($parameters as $key=>$value){
