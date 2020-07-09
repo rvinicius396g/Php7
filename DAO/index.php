@@ -21,8 +21,23 @@
     // echo json_encode($search);
 
     //Carregar usuario usando login e senha
+    // $usuario = new usuario();
+    // $usuario->login("jose","123r55");
+    // echo $usuario;
 
-    $usuario = new usuario();
-    $usuario->login("jose","123r55");
+    //Inserindo dados no banco com DAO
+    // $aluno = new Usuario("aluno2","Kmdez");
+    // $aluno->setDeslogin("aluno");
+    // $aluno->setDessenha("@asd");
+    // $aluno->insert();
+
+    // echo $aluno;
+
+
+    //CRIANDO UPDATE
+    $usuario = new Usuario();
+    $usuario->loadbyId(4);
+    $usuario->update("professor","21321");
+
     echo $usuario;
 ?>
