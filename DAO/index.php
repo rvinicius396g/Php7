@@ -35,9 +35,15 @@
 
 
     //CRIANDO UPDATE
-    $usuario = new Usuario();
-    $usuario->loadbyId(4);
-    $usuario->update("professor","21321");
+    // $usuario = new Usuario();
+    // $usuario->loadbyId(4);
+    // $usuario->update("professor","21321");
 
+    // echo $usuario;
+
+    //DELETE COM DAO
+    $usuario = new usuario();
+    $usuario->loadByID(7);
+    $usuario->delete();
     echo $usuario;
 ?>
