@@ -1,4 +1,9 @@
 <?php
+
+/*
+    EXTRAINDO CONJUNTO DE DADOS PARA O CSV EXCEL
+
+*/
     require_once("config.php");
 
     $sql = new Sql();
