@@ -1,8 +1,8 @@
 <?php
-    class CEP{
-        public $CEP = "08015630";
+    class CEP{ //classe
+        public $CEP = "08015630";//atributo
 
-        public function verBairro(){
+        public function verBairro(){ //metodo
             $cep = "08051630";
             $link = "https://viacep.com.br/ws/$cep/json/";
 
