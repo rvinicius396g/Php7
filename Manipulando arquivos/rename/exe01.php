@@ -16,7 +16,7 @@
 
     rename(
         $dir1.DIRECTORY_SEPARATOR.$filename,  //1 parametro
-        $dir2.DIRECTORY_SEPARATOR.$filename); // 2 paramero
+        $dir2.DIRECTORY_SEPARATOR.$filename); // 2 parametro
         //move o arquivo
     //1º parametro arquivo a ser movido | 2º parametro destino para onde ira mover
 ?>
