@@ -1,0 +1,9 @@
+{
+    "name": "rvinicius396g/composer",
+    "description": "treinamento do HCode com PHP7, aprendendo desde o básico ao avançado",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "monolog/monolog":"1.0.*"
+    }
+}
