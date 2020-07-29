@@ -32,10 +32,10 @@ $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->SMTPAuth = true;
 
 //Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = 'petprojecttaleas@gmail.com';
+$mail->Username = 'mmAciel1920@gmail.com';
 
 //Password to use for SMTP authentication
-$mail->Password = 'Serena1234';
+$mail->Password = 'M@ciel201922';
 
 //Set who the message is to be sent from
 $mail->setFrom('petprojecttaleas@gmail.com', 'Php7');
